@@ -5,8 +5,8 @@ import org.openjdk.jcstress.infra.results.II_Result;
 
 @JCStressTest
 @State
-@Outcome(id = "3, 4", expect = Expect.ACCEPTABLE, desc = "both initialized")
-@Outcome(id = "-1, -1", expect = Expect.ACCEPTABLE, desc = "not seen yet")
+@Outcome(id = "-1, -1", expect = Expect.ACCEPTABLE, desc = "not published yet")
+@Outcome(id = "3, 4", expect = Expect.ACCEPTABLE, desc = "published and initialized")
 public class SafePublicationJcstress {
 
     private SafePublication safePublication;

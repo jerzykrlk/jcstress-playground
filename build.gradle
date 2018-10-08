@@ -31,5 +31,6 @@ dependencies {
 
 jcstress {
     verbose = true
+    timeMillis = 2000
     jvmArgs = "-XX:-UseCompressedOops"
 }
