@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.github.erizo.gradle:jcstress-gradle-plugin:0.8.2'
+        classpath 'com.github.erizo.gradle:jcstress-gradle-plugin:0.8.1'
     }
 }
 
@@ -27,4 +27,8 @@ repositories {
 
 dependencies {
     testCompile group: 'org.spockframework', name: 'spock-core', version: '1.2-groovy-2.5'
+}
+
+jcstress {
+    verbose = true
 }
