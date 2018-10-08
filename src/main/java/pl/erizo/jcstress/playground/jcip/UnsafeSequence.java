@@ -11,7 +11,7 @@ public class UnsafeSequence {
         this.x = 0;
     }
 
-    public synchronized void increment() {
+    public void increment() {
         x++;
     }
 
