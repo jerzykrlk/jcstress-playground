@@ -4,8 +4,8 @@ public class SetValuesInOrder {
 
     private int a = 0;
     private int b = 0;
-    int c = 0;
-    int d = 0;
+    private int c = 0;
+    private int d = 0;
 
     public void setValues(int a, int b, int c, int d) {
         this.a = a;
