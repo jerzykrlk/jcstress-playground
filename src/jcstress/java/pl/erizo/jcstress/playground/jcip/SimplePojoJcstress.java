@@ -1,7 +1,8 @@
-package pl.erizo.jcstress.playground.counter;
+package pl.erizo.jcstress.playground.jcip;
 
 import org.openjdk.jcstress.annotations.*;
 import org.openjdk.jcstress.infra.results.II_Result;
+import pl.erizo.jcstress.playground.jcip.sequence.SimplePojo;
 
 @JCStressTest
 @State

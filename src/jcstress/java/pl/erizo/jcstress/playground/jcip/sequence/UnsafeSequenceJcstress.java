@@ -1,27 +1,28 @@
-package pl.erizo.jcstress.playground.counter;
+package pl.erizo.jcstress.playground.jcip.sequence;
 
 import org.openjdk.jcstress.annotations.*;
 import org.openjdk.jcstress.infra.results.L_Result;
+import pl.erizo.jcstress.playground.jcip.UnsafeSequence;
 
 @JCStressTest
 @Outcome(id = "2", expect = Expect.ACCEPTABLE, desc = "Incremented twice")
 @State
-public class MyLongCounterJcstress {
+public class UnsafeSequenceJcstress {
 
-    private MyLongCounter myLongCounter = new MyLongCounter();
+    private UnsafeSequence unsafeSequence = new UnsafeSequence();
 
     @Actor
     public void actor1() {
-        myLongCounter.increment();
+        unsafeSequence.increment();
     }
 
     @Actor
     public void actor2() {
-        myLongCounter.increment();
+        unsafeSequence.increment();
     }
 
     @Arbiter
     public void arbiter(L_Result result) {
-        result.r1 = myLongCounter.getX();
+        result.r1 = unsafeSequence.getX();
     }
 }

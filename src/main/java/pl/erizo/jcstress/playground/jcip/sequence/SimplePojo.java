@@ -1,4 +1,4 @@
-package pl.erizo.jcstress.playground.counter;
+package pl.erizo.jcstress.playground.jcip.sequence;
 
 public class SimplePojo {
     private int x;

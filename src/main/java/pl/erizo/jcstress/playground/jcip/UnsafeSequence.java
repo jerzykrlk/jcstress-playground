@@ -1,13 +1,13 @@
-package pl.erizo.jcstress.playground.counter;
+package pl.erizo.jcstress.playground.jcip;
 
-public class MyLongCounter {
+public class UnsafeSequence {
     private long x;
 
-    public MyLongCounter(long x) {
+    public UnsafeSequence(long x) {
         this.x = x;
     }
 
-    public MyLongCounter() {
+    public UnsafeSequence() {
         this.x = 0;
     }
 
