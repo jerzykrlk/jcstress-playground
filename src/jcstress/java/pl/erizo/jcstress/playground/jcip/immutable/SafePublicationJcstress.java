@@ -7,9 +7,9 @@ import org.openjdk.jcstress.infra.results.II_Result;
 @State
 @Outcome(id = "3, 4", expect = Expect.ACCEPTABLE, desc = "both initialized")
 @Outcome(id = "-1, -1", expect = Expect.ACCEPTABLE, desc = "not seen yet")
-public class SimplePojoJcstress {
+public class SafePublicationJcstress {
 
-    private SimplePojo simplePojo;
+    private SafePublication safePublication;
 
     /**
      * add values through a variable instead of inline int
@@ -23,14 +23,14 @@ public class SimplePojoJcstress {
 
     @Actor
     public void actor1() {
-        simplePojo = new SimplePojo(initialX, initialY);
+        safePublication = new SafePublication(initialX, initialY);
     }
 
     @Actor
     public void actor2() {
-        if (simplePojo != null) {
-            this.x = simplePojo.getX();
-            this.y = simplePojo.getY();
+        if (safePublication != null) {
+            this.x = safePublication.getX();
+            this.y = safePublication.getY();
         }
     }
 

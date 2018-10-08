@@ -9,7 +9,7 @@ import org.openjdk.jcstress.infra.results.II_Result;
 @Outcome(id = "-1, -1", expect = Expect.ACCEPTABLE, desc = "not seen yet")
 public class SimplePojoDefaultConstructorJcstress {
 
-    private SimplePojo simplePojo;
+    private SafePublication safePublication;
 
     private int x = -1;
 
@@ -17,14 +17,14 @@ public class SimplePojoDefaultConstructorJcstress {
 
     @Actor
     public void actor1() {
-        simplePojo = new SimplePojo();
+        safePublication = new SafePublication();
     }
 
     @Actor
     public void actor2(II_Result result) {
-        if (simplePojo != null) {
-            result.r1 = simplePojo.getX();
-            result.r2 = simplePojo.getY();
+        if (safePublication != null) {
+            result.r1 = safePublication.getX();
+            result.r2 = safePublication.getY();
         } else {
             result.r1 = -1;
             result.r2 = -1;

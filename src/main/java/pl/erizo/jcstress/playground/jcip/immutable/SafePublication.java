@@ -1,15 +1,15 @@
 package pl.erizo.jcstress.playground.jcip.immutable;
 
-public class SimplePojo {
+public class SafePublication {
     private int x;
     private int y;
 
-    public SimplePojo(int x, int y) {
+    public SafePublication(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public SimplePojo() {
+    public SafePublication() {
         this.x = 6;
         this.y = 12;
     }
