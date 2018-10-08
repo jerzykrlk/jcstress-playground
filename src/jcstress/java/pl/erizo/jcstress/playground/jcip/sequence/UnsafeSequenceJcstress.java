@@ -2,7 +2,6 @@ package pl.erizo.jcstress.playground.jcip.sequence;
 
 import org.openjdk.jcstress.annotations.*;
 import org.openjdk.jcstress.infra.results.J_Result;
-import pl.erizo.jcstress.playground.jcip.UnsafeSequence;
 
 @JCStressTest
 @Outcome(id = "6", expect = Expect.ACCEPTABLE, desc = "Incremented twice")

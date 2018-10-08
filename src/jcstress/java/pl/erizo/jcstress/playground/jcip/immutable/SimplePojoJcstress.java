@@ -1,8 +1,7 @@
-package pl.erizo.jcstress.playground.jcip;
+package pl.erizo.jcstress.playground.jcip.immutable;
 
 import org.openjdk.jcstress.annotations.*;
 import org.openjdk.jcstress.infra.results.II_Result;
-import pl.erizo.jcstress.playground.jcip.sequence.SimplePojo;
 
 @JCStressTest
 @State
@@ -12,13 +11,19 @@ public class SimplePojoJcstress {
 
     private SimplePojo simplePojo;
 
+    /**
+     * add values through a variable instead of inline int
+     */
+    private int initialX = 3;
+    private int initialY = 4;
+
     private int x = -1;
 
     private int y = -1;
 
     @Actor
     public void actor1() {
-        simplePojo = new SimplePojo(3, 4);
+        simplePojo = new SimplePojo(initialX, initialY);
     }
 
     @Actor

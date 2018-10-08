@@ -1,4 +1,4 @@
-package pl.erizo.jcstress.playground.jcip.sequence;
+package pl.erizo.jcstress.playground.jcip.immutable;
 
 public class SimplePojo {
     private int x;
@@ -7,6 +7,11 @@ public class SimplePojo {
     public SimplePojo(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    public SimplePojo() {
+        this.x = 6;
+        this.y = 12;
     }
 
     public int getX() {

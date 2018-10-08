@@ -1,6 +1,6 @@
 package pl.erizo.jcstress.playground.jcip.sequence
 
-import pl.erizo.jcstress.playground.jcip.UnsafeSequence
+
 import spock.lang.Specification
 
 class UnsafeSequenceSpec extends Specification {

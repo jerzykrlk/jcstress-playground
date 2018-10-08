@@ -1,4 +1,4 @@
-package pl.erizo.jcstress.playground.jcip;
+package pl.erizo.jcstress.playground.jcip.sequence;
 
 public class UnsafeSequence {
     private long x;
