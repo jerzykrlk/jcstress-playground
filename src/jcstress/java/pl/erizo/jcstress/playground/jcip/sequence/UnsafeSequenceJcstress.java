@@ -12,32 +12,32 @@ public class UnsafeSequenceJcstress {
 
     @Actor
     public void actor1() {
-        unsafeSequence.increment();
+        unsafeSequence.getNext();
     }
 
     @Actor
     public void actor2() {
-        unsafeSequence.increment();
+        unsafeSequence.getNext();
     }
 
     @Actor
     public void actor3() {
-        unsafeSequence.increment();
+        unsafeSequence.getNext();
     }
 
     @Actor
     public void actor4() {
-        unsafeSequence.increment();
+        unsafeSequence.getNext();
     }
 
     @Actor
     public void actor5() {
-        unsafeSequence.increment();
+        unsafeSequence.getNext();
     }
 
     @Actor
     public void actor6() {
-        unsafeSequence.increment();
+        unsafeSequence.getNext();
     }
 
     @Arbiter

@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.github.erizo.gradle:jcstress-gradle-plugin:0.8.2'
+        classpath 'com.github.erizo.gradle:jcstress-gradle-plugin:0.8.3'
     }
 }
 
@@ -18,7 +18,7 @@ apply plugin: 'jcstress'
 group 'pl.erizo.jcstress.playground'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     jcenter()
@@ -26,11 +26,13 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.2-groovy-2.5'
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.3-groovy-2.5'
 }
 
 jcstress {
     verbose = true
-    timeMillis = 2000
-    jvmArgs = "-XX:-UseCompressedOops"
+    timeMillis = 10000
+//    jvmArgs = "-XX:-UseCompressedOops"
+    iterations = 2
+//    forks = -1
 }

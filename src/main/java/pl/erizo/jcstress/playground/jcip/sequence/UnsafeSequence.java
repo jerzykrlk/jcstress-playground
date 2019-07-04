@@ -11,8 +11,8 @@ public class UnsafeSequence {
         this.x = 0;
     }
 
-    public void increment() {
-        x++;
+    public long getNext() {
+        return x++;
     }
 
     public long getX() {

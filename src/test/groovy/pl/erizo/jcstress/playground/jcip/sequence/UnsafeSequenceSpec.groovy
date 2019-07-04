@@ -10,7 +10,7 @@ class UnsafeSequenceSpec extends Specification {
         def counter = new UnsafeSequence()
 
         when:
-        counter.increment()
+        counter.getNext()
 
         then:
         counter.getX() == 1
